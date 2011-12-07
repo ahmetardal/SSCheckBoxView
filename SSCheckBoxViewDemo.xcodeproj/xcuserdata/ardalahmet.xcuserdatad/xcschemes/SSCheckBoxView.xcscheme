@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "598F63E6148E32C60051D19A"
                BuildableName = "SSCheckBoxView.app"
-               BlueprintName = "SSCheckBoxView"
-               ReferencedContainer = "container:SSCheckBoxView.xcodeproj">
+               BlueprintName = "SSCheckBoxViewDemo"
+               ReferencedContainer = "container:SSCheckBoxViewDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,8 +42,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "598F63E6148E32C60051D19A"
             BuildableName = "SSCheckBoxView.app"
-            BlueprintName = "SSCheckBoxView"
-            ReferencedContainer = "container:SSCheckBoxView.xcodeproj">
+            BlueprintName = "SSCheckBoxViewDemo"
+            ReferencedContainer = "container:SSCheckBoxViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -61,8 +61,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "598F63E6148E32C60051D19A"
             BuildableName = "SSCheckBoxView.app"
-            BlueprintName = "SSCheckBoxView"
-            ReferencedContainer = "container:SSCheckBoxView.xcodeproj">
+            BlueprintName = "SSCheckBoxViewDemo"
+            ReferencedContainer = "container:SSCheckBoxViewDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
