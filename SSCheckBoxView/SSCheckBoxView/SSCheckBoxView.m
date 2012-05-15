@@ -37,7 +37,7 @@ static const CGFloat kHeight = 36.0f;
 
 @implementation SSCheckBoxView
 
-@synthesize style, checked;
+@synthesize style, checked, enabled;
 
 - (id) initWithFrame:(CGRect)frame
                style:(SSCheckBoxViewStyle)aStyle
@@ -52,6 +52,7 @@ static const CGFloat kHeight = 36.0f;
     delegate = nil;
     style = aStyle;
     checked = aChecked;
+    self.enabled = YES;
 
     self.userInteractionEnabled = YES;
     self.backgroundColor = [UIColor clearColor];
@@ -85,6 +86,18 @@ static const CGFloat kHeight = 36.0f;
     [super dealloc];
 }
 
+- (void) setEnabled:(BOOL)isEnabled
+{
+    textLabel.enabled = isEnabled;
+    enabled = isEnabled;
+    checkBoxImageView.alpha = isEnabled ? 1.0f: 0.6f;
+}
+
+- (BOOL) enabled
+{
+    return enabled;
+}
+
 - (void) setText:(NSString *)text
 {
     [textLabel setText:text];
@@ -104,12 +117,16 @@ static const CGFloat kHeight = 36.0f;
 }
 
 
-#pragma -
-#pragma Touch related Methods
+#pragma mark -
+#pragma mark Touch-related Methods
 
 - (void) touchesBegan:(NSSet *)touches
             withEvent:(UIEvent *)event
 {
+    if (!enabled) {
+        return;
+    }
+
     self.alpha = 0.8f;
     [super touchesBegan:touches withEvent:event];
 }
@@ -117,6 +134,10 @@ static const CGFloat kHeight = 36.0f;
 - (void) touchesCancelled:(NSSet *)touches
                 withEvent:(UIEvent *)event
 {
+    if (!enabled) {
+        return;
+    }
+
     self.alpha = 1.0f;
     [super touchesCancelled:touches withEvent:event];
 }
@@ -124,6 +145,10 @@ static const CGFloat kHeight = 36.0f;
 - (void) touchesEnded:(NSSet *)touches
             withEvent:(UIEvent *)event
 {
+    if (!enabled) {
+        return;
+    }
+
     // restore alpha
     self.alpha = 1.0f;
 
@@ -154,8 +179,8 @@ static const CGFloat kHeight = 36.0f;
 }
 
 
-#pragma -
-#pragma Private Methods
+#pragma mark -
+#pragma mark Private Methods
 
 - (UIImage *) checkBoxImageForStyle:(SSCheckBoxViewStyle)s
                             checked:(BOOL)isChecked

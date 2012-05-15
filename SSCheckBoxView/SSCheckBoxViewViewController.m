@@ -26,7 +26,7 @@
 }
 
 
-#pragma -
+#pragma mark -
 #pragma mark View lifecycle
 
 - (void) checkBoxViewChangedState:(SSCheckBoxView *)cbv
@@ -34,6 +34,11 @@
     NSLog(@"checkBoxViewChangedState: %d", cbv.checked);
     [UIHelpers showAlertWithTitle:@"CheckBox State Changed"
                               msg:[NSString stringWithFormat:@"checkBoxView state: %d", cbv.checked]];
+
+    // toggle all
+    for (SSCheckBoxView *cbv in self.checkboxes) {
+        cbv.enabled = !cbv.enabled;
+    }
 }
 
 - (void) viewDidLoad
@@ -63,7 +68,7 @@
     cbv = [[SSCheckBoxView alloc] initWithFrame:frame
                                           style:kSSCheckBoxViewStyleGlossy
                                         checked:YES];
-    [cbv setText:@"Some other item"];
+    [cbv setText:@"Enable All"];
     [cbv setStateChangedTarget:self
                       selector:@selector(checkBoxViewChangedState:)];
     [self.view addSubview:cbv];
@@ -73,11 +78,6 @@
 - (void) viewDidUnload
 {
     [super viewDidUnload];
-}
-
-- (BOOL) shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

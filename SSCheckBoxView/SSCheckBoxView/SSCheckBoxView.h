@@ -39,6 +39,7 @@ typedef enum SSCheckBoxViewStyle_ {
 {
     SSCheckBoxViewStyle style;
     BOOL checked;
+    BOOL enabled;
 
     UIImageView *checkBoxImageView;
     UILabel *textLabel;
@@ -52,6 +53,7 @@ typedef enum SSCheckBoxViewStyle_ {
 
 @property (nonatomic, readonly) SSCheckBoxViewStyle style;
 @property (nonatomic, readonly) BOOL checked;
+@property (nonatomic, getter=enabled, setter=setEnabled:) BOOL enabled;
 
 - (id) initWithFrame:(CGRect)frame
                style:(SSCheckBoxViewStyle)aStyle

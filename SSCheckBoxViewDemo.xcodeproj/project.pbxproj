@@ -222,6 +222,7 @@
 		598F63DE148E32C50051D19A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "SpinningSphere Labs";
 			};
 			buildConfigurationList = 598F63E1148E32C50051D19A /* Build configuration list for PBXProject "SSCheckBoxViewDemo" */;
@@ -357,6 +358,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSCheckBoxView/SSCheckBoxViewDemo-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SSCheckBoxView/SSCheckBoxViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = SSCheckBoxViewDemo;
@@ -371,6 +373,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SSCheckBoxView/SSCheckBoxViewDemo-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "SSCheckBoxView/SSCheckBoxViewDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PRODUCT_NAME = SSCheckBoxViewDemo;
