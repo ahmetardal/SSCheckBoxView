@@ -49,11 +49,14 @@ typedef enum SSCheckBoxViewStyle_ {
     // - (void) checkBoxViewChangedState:(SSCheckBoxView *)cbv;
     SEL stateChangedSelector;
     id<NSObject> delegate;
+
+    void (^stateChangedBlock)(SSCheckBoxView *cbv);
 }
 
 @property (nonatomic, readonly) SSCheckBoxViewStyle style;
 @property (nonatomic, readonly) BOOL checked;
 @property (nonatomic, getter=enabled, setter=setEnabled:) BOOL enabled;
+@property (nonatomic, copy) void (^stateChangedBlock)(SSCheckBoxView *cbv);
 
 - (id) initWithFrame:(CGRect)frame
                style:(SSCheckBoxViewStyle)aStyle

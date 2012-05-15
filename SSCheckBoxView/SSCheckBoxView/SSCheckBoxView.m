@@ -38,6 +38,7 @@ static const CGFloat kHeight = 36.0f;
 @implementation SSCheckBoxView
 
 @synthesize style, checked, enabled;
+@synthesize stateChangedBlock;
 
 - (id) initWithFrame:(CGRect)frame
                style:(SSCheckBoxViewStyle)aStyle
@@ -49,6 +50,7 @@ static const CGFloat kHeight = 36.0f;
     }
 
     stateChangedSelector = nil;
+    self.stateChangedBlock = nil;
     delegate = nil;
     style = aStyle;
     checked = aChecked;
@@ -81,6 +83,7 @@ static const CGFloat kHeight = 36.0f;
 
 - (void) dealloc
 {
+    self.stateChangedBlock = nil;
     [checkBoxImageView release];
     [textLabel release];
     [super dealloc];
@@ -164,8 +167,10 @@ static const CGFloat kHeight = 36.0f;
             checked = !checked;
             [self updateCheckBoxImage];
             if (delegate && stateChangedSelector) {
-                [delegate performSelector:stateChangedSelector
-                               withObject:self];
+                [delegate performSelector:stateChangedSelector withObject:self];
+            }
+            else if (stateChangedBlock) {
+                stateChangedBlock(self);
             }
         }
     }
