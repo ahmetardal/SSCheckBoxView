@@ -2,6 +2,8 @@ SSCheckBoxView is a check box UI control for iOS apps.
 
 Check the included demo app for more info.
 
+ARC-enabled.
+
 For any questions and suggestions contact me at:
 http://twitter.com/ardalahmet
 or
