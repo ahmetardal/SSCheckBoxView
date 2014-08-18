@@ -38,7 +38,7 @@ static const CGFloat kHeight = 36.0f;
 
 @implementation SSCheckBoxView
 
-@synthesize style, checked, enabled;
+@synthesize style, checked, enabled, textLabel;
 @synthesize stateChangedBlock;
 
 - (id) initWithFrame:(CGRect)frame

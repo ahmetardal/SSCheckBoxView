@@ -70,16 +70,12 @@
                                         checked:YES];
     [cbv setText:@"Enable All"];
 
-    [cbv setStateChangedTarget:self
-                      selector:@selector(checkBoxViewChangedState:)];
+//    [cbv setStateChangedTarget:self
+//                      selector:@selector(checkBoxViewChangedState:)];
 
-    // handle state changed event using blocks
-    /*
-    __block typeof(self) me = self;
     [cbv setStateChangedBlock:^(SSCheckBoxView *v) {
-        [me checkBoxViewChangedState:v];
+        [self checkBoxViewChangedState:v];
     }];
-     */
 
     [self.view addSubview:cbv];
     [cbv release];
