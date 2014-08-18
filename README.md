@@ -4,6 +4,11 @@ Check the included demo app for more info.
 
 ARC-enabled.
 
+##Installation##
+
+    pod 'SSCheckBoxView', '~> 0.2.1'
+
+
 For any questions and suggestions contact me at:
 http://twitter.com/ardalahmet
 or
