@@ -25,6 +25,7 @@
 
 #import "SSCheckBoxView.h"
 #import "UIHelpers.h"
+#import "ARCMacro.h"
 
 static const CGFloat kHeight = 36.0f;
 
@@ -84,9 +85,9 @@ static const CGFloat kHeight = 36.0f;
 - (void) dealloc
 {
     self.stateChangedBlock = nil;
-    [checkBoxImageView release];
-    [textLabel release];
-    [super dealloc];
+    [checkBoxImageView RELEASE];
+    [textLabel RELEASE];
+    [super DEALLOC];
 }
 
 - (void) setEnabled:(BOOL)isEnabled
@@ -120,8 +121,7 @@ static const CGFloat kHeight = 36.0f;
 }
 
 
-#pragma mark -
-#pragma mark Touch-related Methods
+#pragma mark - Touch-related Methods
 
 - (void) touchesBegan:(NSSet *)touches
             withEvent:(UIEvent *)event
@@ -184,8 +184,7 @@ static const CGFloat kHeight = 36.0f;
 }
 
 
-#pragma mark -
-#pragma mark Private Methods
+#pragma mark - Private Methods
 
 - (UIImage *) checkBoxImageForStyle:(SSCheckBoxViewStyle)s
                             checked:(BOOL)isChecked

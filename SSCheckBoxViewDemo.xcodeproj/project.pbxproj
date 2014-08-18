@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5971974519A2A3CD00CCBCE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5971974419A2A3CD00CCBCE6 /* Default-568h@2x.png */; };
 		598F63EC148E32C70051D19A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598F63EB148E32C70051D19A /* UIKit.framework */; };
 		598F63EE148E32C70051D19A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598F63ED148E32C70051D19A /* Foundation.framework */; };
 		598F63F0148E32C70051D19A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 598F63EF148E32C70051D19A /* CoreGraphics.framework */; };
@@ -41,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5971974319A2A38C00CCBCE6 /* ARCMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacro.h; sourceTree = "<group>"; };
+		5971974419A2A3CD00CCBCE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		598F63E7148E32C60051D19A /* SSCheckBoxViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSCheckBoxViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598F63EB148E32C70051D19A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		598F63ED148E32C70051D19A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +101,7 @@
 		598F63DC148E32C50051D19A = {
 			isa = PBXGroup;
 			children = (
+				5971974419A2A3CD00CCBCE6 /* Default-568h@2x.png */,
 				598F63F1148E32C70051D19A /* SSCheckBoxViewDemo */,
 				598F63EA148E32C60051D19A /* Frameworks */,
 				598F63E8148E32C60051D19A /* Products */,
@@ -190,6 +194,7 @@
 		59C9DCE8148FFA3C00B41CAD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5971974319A2A38C00CCBCE6 /* ARCMacro.h */,
 				59C9DCE9148FFA3C00B41CAD /* UIHelpers.h */,
 				59C9DCEA148FFA3C00B41CAD /* UIHelpers.m */,
 			);
@@ -222,7 +227,7 @@
 		598F63DE148E32C50051D19A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "SpinningSphere Labs";
 			};
 			buildConfigurationList = 598F63E1148E32C50051D19A /* Build configuration list for PBXProject "SSCheckBoxViewDemo" */;
@@ -252,6 +257,7 @@
 				598F6405148E32C70051D19A /* SSCheckBoxViewViewController.xib in Resources */,
 				59C9DCEB148FFA3C00B41CAD /* cb_box_off.png in Resources */,
 				59C9DCEC148FFA3C00B41CAD /* cb_box_off@2x.png in Resources */,
+				5971974519A2A3CD00CCBCE6 /* Default-568h@2x.png in Resources */,
 				59C9DCED148FFA3C00B41CAD /* cb_box_on.png in Resources */,
 				59C9DCEE148FFA3C00B41CAD /* cb_box_on@2x.png in Resources */,
 				59C9DCEF148FFA3C00B41CAD /* cb_dark_off.png in Resources */,
@@ -321,7 +327,6 @@
 		598F6406148E32C70051D19A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -331,6 +336,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -338,7 +344,6 @@
 		598F6407148E32C70051D19A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
