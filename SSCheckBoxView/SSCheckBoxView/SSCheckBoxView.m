@@ -23,6 +23,8 @@
 //  Copyright 2011 SpinningSphere Labs. All rights reserved.
 //
 
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 #import "SSCheckBoxView.h"
 #import "UIHelpers.h"
 #import "ARCMacro.h"
@@ -70,7 +72,8 @@ static const CGFloat kHeight = 36.0f;
     l.shadowColor = [UIColor whiteColor];
     l.shadowOffset = CGSizeMake(0, 1);
     [self addSubview:l];
-    textLabel = l;
+    self.textLabel = l;
+    [l RELEASE];
 
     UIImage *img = [self checkBoxImageForStyle:style checked:checked];
     CGRect imageViewFrame = [self imageViewFrameForCheckBoxImage:img];
@@ -84,7 +87,7 @@ static const CGFloat kHeight = 36.0f;
 
 - (void) dealloc
 {
-    self.stateChangedBlock = nil;
+    [self.stateChangedBlock RELEASE];
     [checkBoxImageView RELEASE];
     [textLabel RELEASE];
     [super DEALLOC];

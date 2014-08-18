@@ -13,6 +13,6 @@
     NSMutableArray *checkboxes;
 }
 
-@property (nonatomic, retain) NSMutableArray *checkboxes;
+@property (nonatomic, strong) NSMutableArray *checkboxes;
 
 @end

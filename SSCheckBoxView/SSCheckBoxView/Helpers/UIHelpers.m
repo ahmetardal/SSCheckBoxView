@@ -40,7 +40,6 @@
                                        cancelButtonTitle:btnTitle
                                        otherButtonTitles:nil];
     [av show];
-    [av release];
 }
 
 + (void) showAlertWithTitle:(NSString *)title

@@ -14,12 +14,6 @@
 
 @synthesize checkboxes;
 
-- (void) dealloc
-{
-    [self.checkboxes release];
-    [super dealloc];
-}
-
 - (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -47,7 +41,6 @@
 
     NSMutableArray *a = [[NSMutableArray alloc] initWithCapacity:10];
     self.checkboxes = a;
-    [a release];
 
     SSCheckBoxView *cbv = nil;
     CGRect frame = CGRectMake(20, 20, 240, 30);
@@ -60,7 +53,6 @@
         [cbv setText:[NSString stringWithFormat:@"Option #%02d", (i + 1)]];
         [self.view addSubview:cbv];
         [self.checkboxes addObject:cbv];
-        [cbv release];
         frame.origin.y += 36;
     }
 
@@ -78,7 +70,6 @@
     }];
 
     [self.view addSubview:cbv];
-    [cbv release];
 }
 
 - (void) viewDidUnload
